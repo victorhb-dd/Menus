@@ -1,0 +1,80 @@
+header {
+    color: white;
+    background: #151515;
+    text-align: center;
+    
+    /* Todos las caracteristicas siguientes son ideales para visualizarse en pantallas moviles o para crear una cabecera horizontal delgada, es decir, una barra superior */
+    figure {
+        display: inline-block;
+        margin: 0px;
+        
+        //Apariencia del logo
+        a {
+            img {
+                margin: 0px;
+                height: 50px; //Tamaño de la imagen ajustada a mi gusto
+            }
+        }
+    }
+    //Apariencia del Titulo o nombre del sitio
+    h1 {
+        display: inline-block;
+        font-size: 1.6em;
+        margin: 0px;
+    }
+    ul.menu {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        
+        li {
+            display: block;
+            font-size: 1.1em;
+            margin: 0px;
+            text-align: center;
+            width: 100%;
+            padding: 10px 0px;
+            a {
+                color: white;
+                font-weight: bolder;
+                line-height: 50px;
+                margin: 0px;
+                text-decoration: none;
+                padding: 15px 30px;
+            }
+        }
+        .menus_fx a:hover {
+            background-color: crimson;
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    nav {
+        ul.menu {
+            li {
+                display: inline-block;
+                width: 48%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 820px) {
+    header {
+        text-align: left;
+       
+        nav {
+            float: right;
+            margin-right: 1%;
+
+            ul.menu {
+                li {
+                    float: left;
+                    padding: 15px 0px;
+                    display: inline-block;
+                    width: 25%;
+                }
+            }
+        }
+    }
+}

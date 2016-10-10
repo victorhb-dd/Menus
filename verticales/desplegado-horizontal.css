@@ -1,0 +1,106 @@
+/*
+** Menu desplegado horizontal, es decir, que las listas de menu que se encuentran en posicion vertical 
+**
+** Para lograr este efecto se debe colocar de primero en el header del html, el menu de navegacion
+** <header>
+**   <nav>
+**     <ul class="menu">
+**       <li class="sub-menu">
+**         <ul>
+**           <li> <a href="#">Opcion 1</a> </li>  <li> <a href="#">Opcion 2</a> </li> 
+**           <li> <a href="#">Opcion 3</a> </li>  <li class="destacado">Servicio 1</li>
+**         </ul>
+**       </li>
+**     
+**     ... (repetir li "sub-menu", para los otros menus)
+**     </ul>
+**   </nav>
+**
+** Despues el logo y el nombre del sitio
+*/
+header {
+  background: url(../img/image.jpg);
+  text-align: center;
+  padding-bottom: 15px;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  color: black;
+}
+header h1 {
+  height: 40px;
+  line-height: 40px;
+  font-size: 1.6em;
+  margin: 0px;
+  border: 2px solid black;
+  border-radius: 15px;
+  width: 80%;
+  margin-left: 4%;
+  background-color: aliceblue;
+  position: relative;
+  top: -15px;
+  padding: 0px 10px;
+}
+header nav {
+  width: 100%;
+  color: red;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+}
+header nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+header nav ul.menu li.sub-menu {
+  width: 100px;
+  position: relative;
+  left: -74px;
+  transform: rotate(-90deg);
+  transition: 1s all ease;
+}
+header nav ul.menu li.sub-menu ul li {
+  font-weight: bolder;
+  padding: 5px 0px;
+  border-bottom: 1px solid white;
+  background-color: black;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 1px 0px 2px white;
+}
+header nav ul.menu li.sub-menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+header nav ul.menu li.sub-menu li.destacado {
+  border-radius: 0px 0px 15px 15px;
+  border-bottom: 1px solid #610B0B;
+  color: #610B0B;
+  background-color: #df7401;
+  font-size: 14px;
+}
+header nav ul.menu li.sub-menu:hover {
+  left: 0px;
+}
+header nav #posMenu1 {
+  top: 40px;
+}
+header nav #posMenu2 {
+  top: 20px;
+}
+@media screen and (min-width: 480px) {
+  header h1 {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+@media screen and (min-width: 767px) {
+  header h1 {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+/*# sourceMappingURL=desplegado-horizontal.css.map */

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menus</title>
+    <link rel="stylesheet" href="../css/normalize.css"/>
+    <link rel="stylesheet" href="menu-android.css"/>
+    <link rel="stylesheet" href="layout.css"/>
+</head>
+<body>
+    <header>
+        <figure>
+            <a href="#">
+                <img src="../img/logo.png" alt="miLogo"/>
+            </a>
+        </figure>
+        
+        <nav>
+            <ul class="menu">
+                <li><a href="opcion1.html">Opcion 1</a></li>
+                <li><a href="opcion2.html">Opcion 2</a></li>
+                <li><a href="opcion3.html">Opcion 3</a></li>
+                <li><a href="opcion4.html">Opcion 4</a></li>
+            </ul>
+            <figure>
+                <a href="#" onClick="ActivarMenu()">
+                    <img src="../img/menu.png" alt="lista de menus"/>
+                </a>
+            </figure>
+        </nav>
+    </header>
+    <div id="content">
+        
+    </div>
+    <script src="../js/modernizr.custom.js"></script>
+    <script>
+        var Menu_Activado = false;
+        function ActivarMenu(){
+            //Comprobar como esta el menu
+            //Si esta ocultado --> lo mostramos
+            //Sino --> lo ocultamos
+            if (Menu_Activado == false) {
+                //Lo mostramos
+                var altura = -210;
+                var mover = setInterval(function(){
+                    altura+=2;
+                    if(altura == 0) clearInterval(mover);
+                    document.getElementById("content").style.top = altura + "px";
+                },1);
+                Menu_Activado = true;
+            }
+            else {
+                //sino lo ocultamos
+                var altura = 0;
+                var mover = setInterval(function(){
+                    altura+=2;
+                    if(altura == 210) clearInterval(mover);
+                    document.getElementById("content").style.top = "-" + altura + "px";
+                },1);
+                Menu_Activado = false;
+            }
+            
+        }
+    </script>
+</body>
+</html>

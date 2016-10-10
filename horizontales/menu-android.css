@@ -1,0 +1,68 @@
+header {
+  width: 100%;
+  background: #151515;
+  padding: 5px 0px;
+  text-align: center;
+}
+header figure {
+  display: inline-block;
+  margin: 0px;
+  height: 40px;
+  background: white;
+}
+header figure img {
+  height: 40px;
+  margin: 0px;
+}
+header nav figure img {
+  padding: 2px;
+  display: inline-block;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  height: 35px;
+  width: 35px;
+}
+header nav ul {
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  list-style: none;
+}
+header nav li {
+  display: block;
+  margin: 10px 0px;
+  padding: 0px;
+  width: 100%;
+  text-align: center;
+}
+header nav li a {
+  margin: 0px;
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  line-height: 40px;
+  padding: 10px 30px;
+}
+div#content {
+  position: relative;
+  top: -210px;
+}
+@media screen and (min-width: 480px) {
+  header nav {
+    display: inline-block;
+    float: right;
+    margin-right: 1%;
+  }
+  header nav figure {
+    display: none;
+  }
+  header nav li {
+    display: inline;
+    width: 25%;
+    margin: 0px;
+    float: left;
+  }
+}
+/*# sourceMappingURL=menu-android.css.map */

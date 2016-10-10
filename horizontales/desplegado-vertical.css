@@ -1,0 +1,93 @@
+/*
+** Menu desplegado vertical, es decir, que las listas de menu que se encuentran en posicion horizontal (una ** al lado de la otra), tendran opciones que se mostraran de forma vertical, como ocurre en las barras 
+** menus de los programas de Windows.
+**
+** Para lograr este efecto se debe colocar de primero en el header del html, el menu de navegacion
+** <header>
+**    <nav>
+**      <ul class="menu">
+**        <li>Opcion 1</li><li>Opcion 2</li><li>Opcion 3</li>
+**      </ul>
+**    </nav>
+**
+** Despues el logo y el nombre del sitio
+*/
+header {
+  background-color: #151515;
+  text-align: center;
+  padding-bottom: 10px;
+  position: relative;
+  width: 100%;
+}
+header figure {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px;
+  height: 40px;
+  background-color: white;
+}
+header figure a img {
+  height: 40px;
+  margin: 0px;
+}
+header h1 {
+  display: inline-block;
+  font-size: 1.6em;
+  margin: 8px 0px;
+}
+header nav {
+  width: 100%;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+}
+header nav ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+header nav ul.menu li.sub-menu {
+  float: right;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  position: relative;
+  top: -77px;
+  transition: 1s all ease;
+}
+header nav ul.menu li.sub-menu ul li {
+  font-weight: bolder;
+  padding: 5px 0px;
+  border-bottom: 1px solid white;
+  background-color: black;
+  width: 90%;
+  margin-left: 5%;
+  box-shadow: 1px 0px 2px white;
+}
+header nav ul.menu li.sub-menu ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+}
+header nav ul.menu li.sub-menu li.destacado {
+  border-radius: 0px 0px 15px 15px;
+  border-bottom: 1px solid #610B0B;
+  color: #610B0B;
+  background-color: #df7401;
+  font-size: 14px;
+}
+header nav ul.menu li.sub-menu:hover {
+  top: 0px;
+}
+@media screen and (min-width: 480px) {
+  header nav ul.menu li.sub-menu {
+    width: 18%;
+  }
+}
+@media screen and (min-width: 767px) {
+  header nav ul.menu li.sub-menu {
+    width: 20%;
+  }
+}
+/*# sourceMappingURL=desplegado-vertical.css.map */
